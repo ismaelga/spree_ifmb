@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 1.2.0'
-  s.add_dependency 'ifmb', '~> 0.0.2'
+  s.add_dependency 'ifmb', '~> 0.0.3'
   # s.add_development_dependency('spree_sample', '~> 1.2.0')
   s.add_development_dependency 'capybara', '1.0.1'
   s.add_development_dependency 'factory_girl', '~> 2.6.4'

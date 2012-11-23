@@ -1,5 +1,6 @@
-class PaymentMethod::Ifmb < PaymentMethod
+class PaymentMethod::Ifmb < Spree::PaymentMethod
 
+  attr_accessible :preferred_display_name, :preferred_entity, :preferred_sub_entity
   preference :display_name, :string
   preference :entity, :string
   preference :sub_entity, :string
@@ -18,16 +19,12 @@ class PaymentMethod::Ifmb < PaymentMethod
     payment.state != 'void'
   end
 
-  def capture(payment)
-    payment.update_attribute(:state, 'pending') if payment.state == 'checkout'
-    payment.complete
-    true
+  def capture(*args)
+    ActiveMerchant::Billing::Response.new(true, "", {}, {})
   end
 
-  def void(payment)
-    payment.update_attribute(:state, 'pending') if payment.state == 'checkout'
-    payment.void
-    true
+  def void(*args)
+    ActiveMerchant::Billing::Response.new(true, "", {}, {})
   end
 
   def payment_profiles_supported?
