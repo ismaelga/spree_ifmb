@@ -19,3 +19,7 @@ Be sure to bundle your dependencies and then create a dummy test app for the spe
     $ bundle exec rspec spec
 
 Copyright (c) 2012 Sinemys, released under the New BSD License
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ismaelga/spree_ifmb/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
